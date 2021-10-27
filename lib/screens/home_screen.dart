@@ -17,7 +17,41 @@ class HomePage extends StatelessWidget {
             topRight: Radius.circular(50),
           ),
         ),
-        child: ,
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              height: 50,
+              child: ListView(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  ProductCircleTop(imageName: ,),
+                  ProductCircleTop(imageName: ,),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ProductCircleTop extends StatelessWidget {
+  const ProductCircleTop({Key? key,@required this.imageName}) : super(key: key);
+
+  final String? imageName;
+
+  @override
+  Widget build(BuildContext context) {
+    return  Padding(
+      padding: EdgeInsets.symmetric(horizontal: 5),
+      child: CircleAvatar(
+        radius: 25,
+        backgroundImage:AssetImage(imageName.toString()),
       ),
     );
   }
