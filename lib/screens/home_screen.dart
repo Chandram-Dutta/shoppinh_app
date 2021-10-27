@@ -17,6 +17,14 @@ class HomePage extends StatelessWidget {
       imageName: "assets/product_circle_top_assets/sportsshoes.jpeg",
       typeName: "Sport Shoes",
     ),
+    ProductCircleTop(
+      imageName: "assets/product_circle_top_assets/highheels.jpeg",
+      typeName: "High Heels",
+    ),
+    ProductCircleTop(
+      imageName: "assets/product_circle_top_assets/crocs.jpg",
+      typeName: "Crocs",
+    ),
   ];
 
   @override
@@ -24,6 +32,10 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Shoppinh"),
+        actions: [
+          IconButton(
+              onPressed: () {}, icon: const Icon(Icons.settings_outlined))
+        ],
       ),
       body: Container(
         decoration: BoxDecoration(
