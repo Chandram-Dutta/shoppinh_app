@@ -9,6 +9,16 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Shoppinh"),
       ),
+      body: Container(
+        decoration: BoxDecoration(
+          color: Theme.of(context).primaryColor,
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(50),
+            topRight: Radius.circular(50),
+          ),
+        ),
+        child: ,
+      ),
     );
   }
 }
