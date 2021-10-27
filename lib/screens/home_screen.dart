@@ -28,8 +28,15 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 scrollDirection: Axis.horizontal,
                 children: const [
-                  ProductCircleTop(imageName: ,),
-                  ProductCircleTop(imageName: ,),
+                  ProductCircleTop(
+                    imageName: "assets/product_circle_top_assets/photo1.jpeg",
+                  ),
+                  ProductCircleTop(
+                    imageName: "assets/product_circle_top_assets/photo2.jpeg",
+                  ),
+                  ProductCircleTop(
+                    imageName: "assets/product_circle_top_assets/photo3.jpeg",
+                  ),
                 ],
               ),
             )
@@ -41,17 +48,18 @@ class HomePage extends StatelessWidget {
 }
 
 class ProductCircleTop extends StatelessWidget {
-  const ProductCircleTop({Key? key,@required this.imageName}) : super(key: key);
+  const ProductCircleTop({Key? key, @required this.imageName})
+      : super(key: key);
 
   final String? imageName;
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
+    return Padding(
       padding: EdgeInsets.symmetric(horizontal: 5),
       child: CircleAvatar(
         radius: 25,
-        backgroundImage:AssetImage(imageName.toString()),
+        backgroundImage: AssetImage(imageName.toString()),
       ),
     );
   }
