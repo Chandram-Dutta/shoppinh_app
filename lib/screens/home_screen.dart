@@ -22,24 +22,33 @@ class HomePage extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            SizedBox(
-              height: 50,
-              child: ListView(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                scrollDirection: Axis.horizontal,
-                children: const [
-                  ProductCircleTop(
-                    imageName: "assets/product_circle_top_assets/photo1.jpeg",
-                  ),
-                  ProductCircleTop(
-                    imageName: "assets/product_circle_top_assets/photo2.jpeg",
-                  ),
-                  ProductCircleTop(
-                    imageName: "assets/product_circle_top_assets/photo3.jpeg",
-                  ),
-                ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: SizedBox(
+                height: 70,
+                child: ListView(
+                  physics: const BouncingScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  children: const [
+                    ProductCircleTop(
+                      imageName: "assets/product_circle_top_assets/photo1.jpeg",
+                    ),
+                    ProductCircleTop(
+                      imageName: "assets/product_circle_top_assets/photo2.jpeg",
+                    ),
+                    ProductCircleTop(
+                      imageName: "assets/product_circle_top_assets/photo3.jpeg",
+                    ),
+                    ProductCircleTop(
+                      imageName: "assets/product_circle_top_assets/photo2.jpeg",
+                    ),
+                    ProductCircleTop(
+                      imageName: "assets/product_circle_top_assets/photo1.jpeg",
+                    ),
+                  ],
+                ),
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -56,9 +65,9 @@ class ProductCircleTop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 5),
       child: CircleAvatar(
-        radius: 25,
+        radius: 35,
         backgroundImage: AssetImage(imageName.toString()),
       ),
     );
