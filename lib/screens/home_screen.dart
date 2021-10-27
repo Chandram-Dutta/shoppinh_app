@@ -60,7 +60,7 @@ class HomePage extends StatelessWidget {
                 alignment: Alignment.center,
                 width: MediaQuery.of(context).size.width,
                 height: 100,
-                child: isDesktop(context, 400)
+                child: isDesktop(context, 500)
                     ? Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: categoriesItem,
