@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 ThemeData lightTheme = ThemeData(
-  textTheme: GoogleFonts.latoTextTheme(),
   primaryColor: Colors.grey[100],
   scaffoldBackgroundColor: Colors.black,
   colorScheme: const ColorScheme.light(),
@@ -11,4 +10,6 @@ ThemeData lightTheme = ThemeData(
     backgroundColor: Colors.black,
     foregroundColor: Colors.white,
   ),
+  textTheme: GoogleFonts.montserratTextTheme(),
+  dividerColor: Colors.black,
 );

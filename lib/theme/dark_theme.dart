@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 ThemeData darkTheme = ThemeData(
   primaryColor: Colors.grey[900],
@@ -9,4 +10,13 @@ ThemeData darkTheme = ThemeData(
     backgroundColor: Colors.white,
     foregroundColor: Colors.black,
   ),
+  textTheme: const TextTheme(
+    headline1: TextStyle(
+      color: Colors.white,
+    ),
+    bodyText1: TextStyle(
+      color: Colors.white,
+    ),
+  ),
+  dividerColor: Colors.white,
 );

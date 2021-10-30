@@ -13,11 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       title: 'Shoppinh App',
-      theme: lightTheme,
+      theme: darkTheme,
       darkTheme: darkTheme,
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }

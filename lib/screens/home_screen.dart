@@ -1,30 +1,16 @@
+import 'package:carousel_images/carousel_images.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:shoppinh_app/responsive/responsive.dart';
+import 'package:shoppinh_app/screens/sections/categories.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  HomePage({Key? key}) : super(key: key);
 
-  final List<Widget> categoriesItem = const [
-    ProductCircleTop(
-      imageName: "assets/product_circle_top_assets/formalshoes.jpg",
-      typeName: "Formal",
-    ),
-    ProductCircleTop(
-      imageName: "assets/product_circle_top_assets/slippers.jpeg",
-      typeName: "Slippers",
-    ),
-    ProductCircleTop(
-      imageName: "assets/product_circle_top_assets/sportsshoes.jpeg",
-      typeName: "Sport Shoes",
-    ),
-    ProductCircleTop(
-      imageName: "assets/product_circle_top_assets/highheels.jpeg",
-      typeName: "High Heels",
-    ),
-    ProductCircleTop(
-      imageName: "assets/product_circle_top_assets/crocs.jpg",
-      typeName: "Crocs",
-    ),
+  final List<String> listImages = [
+    'assets/brands_assets/nike.jpeg',
+    'assets/brands_assets/puma.jpeg',
+    'assets/brands_assets/adidas.jpeg',
   ];
 
   @override
@@ -51,7 +37,9 @@ class HomePage extends StatelessWidget {
               height: 50,
               child: Text(
                 "Categories",
-                style: Theme.of(context).textTheme.headline5,
+                style: GoogleFonts.dancingScript(
+                  fontSize: 32,
+                ),
               ),
             ),
             Padding(
@@ -71,34 +59,26 @@ class HomePage extends StatelessWidget {
                         children: categoriesItem),
               ),
             ),
+            const Divider(),
+            SizedBox(
+              height: 50,
+              child: Text(
+                "Brands",
+                style: GoogleFonts.dancingScript(
+                  fontSize: 32,
+                ),
+              ),
+            ),
+            CarouselImages(
+              listImages: listImages,
+              height: 200,
+              scaleFactor: 0.1,
+              borderRadius: 30.0,
+              cachedNetworkImage: true,
+              verticalAlignment: Alignment.center,
+            ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class ProductCircleTop extends StatelessWidget {
-  const ProductCircleTop(
-      {Key? key, @required this.imageName, @required this.typeName})
-      : super(key: key);
-
-  final String? imageName;
-
-  final String? typeName;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8),
-      child: Column(
-        children: [
-          CircleAvatar(
-            radius: 40,
-            backgroundImage: AssetImage(imageName.toString()),
-          ),
-          Text(typeName.toString())
-        ],
       ),
     );
   }
