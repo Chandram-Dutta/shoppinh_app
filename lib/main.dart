@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Shoppinh App',
-      theme: darkTheme,
+      theme: lightTheme,
       darkTheme: darkTheme,
       home: HomePage(),
     );
